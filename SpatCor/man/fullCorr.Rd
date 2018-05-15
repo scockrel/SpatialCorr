@@ -4,7 +4,7 @@
 \alias{fullCorr}
 \title{Spatial Field Correlation Function}
 \usage{
-fullCorr(x, y, ext)
+fullCorr(x, y)
 }
 \arguments{
 \item{x}{climate data}

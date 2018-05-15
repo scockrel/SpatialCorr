@@ -9,7 +9,7 @@
 
 ## Correlation, masking all done in one go. Plot ready after this.
 
-fullCorr <- function(x, y, ext){ # x=climate data, y=column name from trDat in "", ext is the extent of the raster
+fullCorr <- function(x, y){ # x=climate data, y=column name from trDat in ""
   rng <- range(as.numeric(substr(grep( #Creates date range based on the climate data
     unique(substr(as.character(colnames(x)), 7, 9)),
     colnames(x), value=T),2, 5)))
