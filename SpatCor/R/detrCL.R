@@ -9,7 +9,7 @@
 #' 
 
 detrCL <- function(climData, mod){ #mod is fd or lm
-  for (i in unique(substring(climData, 7))){
+  for (i in unique(substring(names(climData), 7))){
     d <- values(subset(datM, grep(i, names(datM), value=T)))
     d[is.na(d[])] <- -9999
     if(mod == "fd"){
