@@ -24,5 +24,8 @@ detrCL <- function(climData, mod){ #mod is fd or lm
         do.call("<<-", list(i, r))
       }else{
         do.call("<<-", list(i, d))
+      }
+    }
   }
 }
+    
