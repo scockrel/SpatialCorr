@@ -4,13 +4,13 @@
 #' gridded climate data
 #' @param climData climate data
 #' @param mod mode of detrending
-#' @return results from datM
+#' @return results from climData
 #' @export
 #' 
 
 detrCL <- function(climData, mod){ #mod is fd or lm
   for (i in unique(substring(names(climData), 7))){
-    d <- values(subset(datM, grep(i, names(datM), value=T)))
+    d <- values(subset(climData, grep(i, names(climData), value=T)))
     d[is.na(d[])] <- -9999
     if(mod == "fd"){
     ## First Differences Method
