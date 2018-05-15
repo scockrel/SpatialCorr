@@ -10,8 +10,6 @@ fullCorr(x, y, ext)
 \item{x}{climate data}
 
 \item{y}{tree ring data}
-
-\item{ext}{spatial extent of the climate data}
 }
 \value{
 results from temp

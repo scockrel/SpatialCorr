@@ -4,17 +4,12 @@
 #' gridded climate data
 #' @param x climate data
 #' @param y tree ring data
-#' @param ext spatial extent of the climate data
 #' @return results from temp
 #' @export
 
 ## Correlation, masking all done in one go. Plot ready after this.
 
 fullCorr <- function(x, y, ext){ # x=climate data, y=column name from trDat in "", ext is the extent of the raster
-  #create rasters to store the spatial correlations
-  CorT <- setExtent(raster::raster(nrow = nrow(x), ncol = ncol(x)), ext)
-  Cor <- setExtent(raster::raster(nrow = nrow(x), ncol = ncol(x)), ext)
-  temp <- setExtent(raster::raster(nrow = nrow(x), ncol = ncol(x)),ext)
   rng <- range(as.numeric(substr(grep( #Creates date range based on the climate data
     unique(substr(as.character(colnames(x)), 7, 9)),
     colnames(x), value=T),2, 5)))
